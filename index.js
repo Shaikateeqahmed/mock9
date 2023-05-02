@@ -6,6 +6,11 @@ require("dotenv").config();
 
 
 const app = express();
+
+app.get("/",(req,res)=>{
+    res.send("home page");
+})
+
 app.use(express.json());
 app.use("/users",user);
 app.use("/posts",post);
